@@ -1,20 +1,20 @@
 ---
 layout: workshop
 root: .
-venue: FIXME (brief name of host site)
-address: FIXME (street address of home location)
-country: FIXME (country (hyphenated if need be, like 'United-Kingdom')
-language: FIXME (language code like 'en' or 'fr')
-latlng: (fractional latitude and longitude like 41.7901128,-87.6007318)
-humandate: FIXME (use the format 'Feb 17-18, 2020' (without the quotes)
-humantime: FIXME (use the format '9:00 am - 4:30 pm' (without the quotes)
-startdate: FIXME (use YYYY-MM-DD format like 2015-01-01)
-enddate: FIXME (use YYYY-MM-DD format like 2015-01-02)
-instructor: (list of names like ["Kay McNulty", "Betty Jennings", "Betty Snyder"])
-helper: (list of names like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"])
-contact: FIXME (contact email address for workshop organizer)
-etherpad: # FIXME (insert the URL for your Etherpad if you're using one)
-eventbrite: # FIXME (delete this if not used, otherwise uncomment and provide 1234567890AB key for Eventbrite registration)
+venue: Monash University
+address: TBA Clayton Campus
+country: Australia
+language: en
+latlng: -37.912270, 145.132756
+humandate: Jul 2-3, 2015
+humantime: 10:00 am - 4:30 pm
+startdate: 2015-07-02
+enddate: 2015-07-03
+instructor: ["Kirill Tsyganov", "Steve Androulakis", "Roxane Legaie", "Paul Harrison"]
+helper: ["TBA"]
+contact: steve.androulakis@monash.edu
+etherpad: https://etherpad.mozilla.org/2015-07-02-monash
+# TODO eventbrite: # FIXME (delete this if not used, otherwise uncomment and provide 1234567890AB key for Eventbrite registration)
 ---
 <!--
   HEADER
@@ -165,6 +165,32 @@ eventbrite: # FIXME (delete this if not used, otherwise uncomment and provide 12
   </div>
 </div>
 
+<div class="row">
+  <div class="col-md-6">
+    <h3>Day 1</h3>
+    <table class="table table-striped">
+      <tr> <td>10:00</td>  <td>Registration and Welcome</td> </tr>
+      <tr> <td>10:30</td>  <td>Getting started with the Unix shell</td> </tr>
+      <tr> <td>12:30</td>  <td>Lunch break</td> </tr>
+      <tr> <td>13:00</td>  <td>Automating tasks with the Unix shell</td> </tr>
+      <tr> <td>14:30</td>  <td>Coffee</td> </tr>	
+	  <tr> <td>15:00</td>  <td>Git and GitHub</td> </tr>
+      <tr> <td>16:30</td>  <td>Wrap-up</td> </tr>
+    </table>
+  </div>
+  <div class="col-md-6">
+    <h3>Day 2</h3>
+    <table class="table table-striped">
+      <tr> <td>10:00</td>  <td>Programming with R</td> </tr>	
+      <tr> <td>12:30</td>  <td>Lunch break</td> </tr>	
+      <tr> <td>13:00</td>  <td>Programming with R</td> </tr>
+      <tr> <td>14:30</td>  <td>Coffee</td> </tr>
+      <tr> <td>15:00</td>  <td>Programming with R</td> </tr>
+      <tr> <td>16:30</td>  <td>Wrap-up</td> </tr>
+  </table>
+  </div>
+</div>
+
 <!--
   ETHERPAD
 
@@ -220,20 +246,6 @@ eventbrite: # FIXME (delete this if not used, otherwise uncomment and provide 12
     </ul>
   </div>
   <div class="col-md-6">
-    <h3>Programming in Python</h3>
-    <ul>
-      <li>Using libraries</li>
-      <li>Working with arrays</li>
-      <li>Reading and plotting data</li>
-      <li>Creating and using functions</li>
-      <li>Loops and conditionals</li>
-      <li>Defensive programming</li>
-      <li>Using Python from the command line</li>
-      <li><a href="{{site.swc_lessons}}/ref/03-python.html">Reference...</a></li>
-    </ul>
-  </div>
-  <!--
-  <div class="col-md-6">
     <h3>Programming in R</h3>
     <ul>
       <li>Working with vectors and data frames</li>
@@ -244,7 +256,6 @@ eventbrite: # FIXME (delete this if not used, otherwise uncomment and provide 12
       <li><a href="{{site.swc_lessons}}/ref/06-R.html">Reference...</a></li>
     </ul>
   </div>
-  -->
 </div>
 
 <div class="row">
@@ -260,20 +271,6 @@ eventbrite: # FIXME (delete this if not used, otherwise uncomment and provide 12
       <li>Open licenses</li>
       <li>Where to host work, and why</li>
       <li><a href="{{site.swc_lessons}}/ref/02-git.html">Reference...</a></li>
-    </ul>
-  </div>
-  <div class="col-md-6">
-    <h3>Managing Data with SQL</h3>
-    <ul>
-      <li>Reading and sorting data</li>
-      <li>Filtering with <code>where</code></li>
-      <li>Calculating new values on the fly</li>
-      <li>Handling missing values</li>
-      <li>Combining values using aggregation</li>
-      <li>Combining information from multiple tables using <code>join</code></li>
-      <li>Creating, modifying, and deleting data</li>
-      <li>Programming with databases</li>
-      <li><a href="{{site.swc_lessons}}/ref/04-sql.html">Reference...</a></li>
     </ul>
   </div>
 </div>
@@ -452,102 +449,6 @@ eventbrite: # FIXME (delete this if not used, otherwise uncomment and provide 12
   </div>
 </div> <!-- End of 'editor' section. -->
 
-<div id="python"> <!-- Start of 'Python' section. Remove the third paragraph if
-           the workshop will teach Python using something other than
-           the IPython notebook.
-           Details at http://ipython.org/ipython-doc/2/install/install.html#browser-compatibility -->
-  <h3>Python</h3>
-
-  <p>
-    <a href="http://python.org">Python</a> is a popular language for
-    scientific computing, and great for general-purpose programming as
-    well.  Installing all of its scientific packages individually can be
-    a bit difficult, so we recommend an all-in-one installer.
-  </p>
-
-    <p>
-      Regardless of how you choose to install it,
-      <strong>please make sure you install Python version 2.x and not version 3.x</strong>
-      (e.g., 2.7 is fine but not 3.4).
-      Python 3 introduced changes that will break some of the code we teach during the workshop.
-    </p>
-
-    <p>
-      We will teach Python using the IPython notebook, a programming environment
-      that runs in a web browser. For this to work you will need a reasonably
-      up-to-date browser. The current versions of the Chrome, Safari and
-      Firefox browsers are all <a
-      href='http://ipython.org/ipython-doc/2/install/install.html#browser-compatibility'>supported</a>
-      (some older browsers, including Internet Explorer version 9
-      and below, are not).
-    </p>
-
-  <div class="row">
-    <div class="col-md-4">
-      <h4 id="python-windows">Windows</h4>
-      <ul>
-        <li>
-          Download and
-          install <a href="https://store.continuum.io/cshop/anaconda/">Anaconda</a>.
-        </li>
-        <li>
-          Download the default Python 2 installer (do not follow the link to version 3).
-          Use all of the defaults for installation
-          <em>except</em> make sure to check
-          <strong>Make Anaconda the default Python</strong>.
-        </li>
-      </ul>
-    </div>
-    <div class="col-md-4">
-      <h4 id="python-macosx">Mac OS X</h4>
-      <ul>
-        <li>
-          Download and
-          install <a href="https://store.continuum.io/cshop/anaconda/">Anaconda</a>.
-        </li>
-        <li>
-          Download the default Python 2 installer (do not follow the link to version 3).
-          Use all of the defaults for installation.
-        </li>
-      </ul>
-    </div>
-    <div class="col-md-4">
-      <h4 id="python-linux">Linux</h4>
-      <p>
-        We recommend the all-in-one scientific Python installer
-        <a href="http://continuum.io/downloads.html">Anaconda</a>.
-        (Installation requires using the shell and if you aren't
-        comfortable doing the installation yourself just
-        download the installer and we'll help you at the workshop.)
-      </p>
-      <ol>
-        <li>
-          Download the installer that matches your operating
-          system and save it in your home folder.
-          Download the default Python 2 installer (do not follow the link to version 3).
-        </li>
-        <li>
-          Open a terminal window.
-        </li>
-        <li>
-          Type <pre>bash Anaconda-</pre> and then press
-          tab. The name of the file you just downloaded should
-          appear.
-        </li>
-        <li>
-          Press enter. You will follow the text-only prompts.  When
-          there is a colon at the bottom of the screen press the down
-          arrow to move down through the text. Type <code>yes</code> and
-          press enter to approve the license. Press enter to approve the
-          default location for the files. Type <code>yes</code> and
-          press enter to prepend Anaconda to your <code>PATH</code>
-          (this makes the Anaconda distribution the default Python).
-        </li>
-      </ol>
-    </div>
-  </div>
-</div> <!-- End of 'Python' section. -->
-
 <div id="r"> <!-- Start of 'R' section. -->
   <h3>R</h3>
 
@@ -592,39 +493,6 @@ eventbrite: # FIXME (delete this if not used, otherwise uncomment and provide 12
     </div>
   </div>
 </div> <!-- End of 'R' section. -->
-
-<div id="sql"> <!-- Start of 'SQLite' section. -->
-  <h3>SQLite</h3>
-
-  <p>
-    SQL is a specialized programming language used with databases.  We
-    use a simple database manager called
-    <a href="http://www.sqlite.org/">SQLite</a> in our lessons.
-  </p>
-
-  <div class="row">
-    <div class="col-md-4">
-      <h4 id="sql-windows">Windows</h4>
-      <p>
-        The <a href="{{site.swc_github}}/windows-installer">Software Carpentry Windows Installer</a>
-        installs SQLite for Windows.
-        If you used the installer to configure nano, you don't need to run it again.
-      </p>
-    </div>
-    <div class="col-md-4">
-      <h4 id="sql-macosx">Mac OS X</h4>
-      <p>
-        SQLite comes pre-installed on Mac OS X.
-      </p>
-    </div>
-    <div class="col-md-4">
-      <h4 id="sql-linux">Linux</h4>
-      <p>
-        SQLite comes pre-installed on Linux.
-      </p>
-    </div>
-  </div>
-</div> <!-- End of 'SQLite' section. -->
 
 <!--
   Uncomment this section if you are using our virtual machine.
